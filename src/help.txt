@@ -1,27 +1,31 @@
 # Git Commands and Their Uses
 
+
+### Committing your file to a branch ###
+
+git add .  
+- Use this to stage your changes.
+
+git add <file-name>  
+- Use this to add specific files to the staging area.
+
+git commit -m "Your commit message"  
+- Use this to commit your changes.
+
+git push  origin "Branch Name"
+- Use this to push your changes to the remote repository.
+----------------------------------------------------------------------------------------------------------------------
+
 ## Basic Git Commands
 
 git status  
 - Use this to check the current status of your repository (e.g., changes, staged files).
 
-git add <file-name>  
-- Use this to add specific files to the staging area.
-
-git add .  
-- Use this to add all changes in the current directory to the staging area.
-
-git commit -m "Commit message"  
-- Use this to commit staged changes with a descriptive message.
-
 git log  
 - Use this to view the commit history of the repository.
+----------------------------------------------------------------------------------------------------------------------
 
-git push origin <branch-name>  
-- Use this to push your local commits to the remote repository.
-
-git pull origin <branch-name>  
-- Use this to fetch and merge changes from the remote repository.
+### Branch Movement ###
 
 git branch <branch-name>  
 - Use this to create a new branch.
@@ -31,6 +35,9 @@ git checkout <branch-name>
 
 git switch <branch-name>  
 - Alternative command to switch branches.
+----------------------------------------------------------------------------------------------------------------------
+
+### Extras ###
 
 git merge <branch-name>  
 - Use this to merge a branch into the current branch.
@@ -38,18 +45,8 @@ git merge <branch-name>
 git branch -d <branch-name>  
 - Use this to delete a branch locally.
 
-git remote -v  
-- Use this to view the remote repositories linked to your local repository.
+git push origin <branch-name>  
+- Use this to push your local commits to the remote repository.
 
-git remote add origin <repository-url>  
-- Use this to link your local repository to a remote repository.
-
-### Committing your file to a branch
-git add .  
-- Use this to stage your changes.
-
-git commit -m "Your commit message"  
-- Use this to commit your changes.
-
-git push  
-- Use this to push your changes to the remote repository.
+git pull origin <branch-name>  
+- Use this to fetch and merge changes from the remote repository.
