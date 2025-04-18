@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
   return (
     <div>
-      <title>Descendants</title>
+    <title>Descendants</title>
     <p>Hello World!</p>
     <div>
         <button onClick={() => setCount((count) => count + 1)}>
