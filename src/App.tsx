@@ -9,7 +9,7 @@ function App() {
 
     <div>
     <title>Descendants</title>
-    <p>Hello World!</p>
+    <p>Riding it crazy style!</p>
     <div>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
