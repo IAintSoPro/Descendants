@@ -1,15 +1,17 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
 import './index.css';
 import App from './App.tsx';
 
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
-  // Safely call createRoot only if rootElement is not null
   createRoot(rootElement as HTMLElement).render(
     <StrictMode>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </StrictMode>,
   );
 } else {
