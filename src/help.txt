@@ -2,12 +2,6 @@
 
 ## Basic Git Commands
 
-git init  
-- Use this to initialize a new Git repository in your project directory.
-
-git clone <repository-url>  
-- Use this to clone an existing repository from a remote server.
-
 git status  
 - Use this to check the current status of your repository (e.g., changes, staged files).
 
@@ -44,30 +38,13 @@ git merge <branch-name>
 git branch -d <branch-name>  
 - Use this to delete a branch locally.
 
-git stash  
-- Use this to temporarily save changes without committing them.
-
-git stash apply  
-- Use this to reapply stashed changes.
-
 git remote -v  
 - Use this to view the remote repositories linked to your local repository.
 
 git remote add origin <repository-url>  
 - Use this to link your local repository to a remote repository.
 
-## Current Setup for Making Web Pages
-
-### Directory Structure
-- Your web pages should be stored in the `src` directory of your repository.
-
-### HTML Files
-- Create `.html` files for your web pages in the `src` directory.
-
-### CSS and JavaScript
-- Store your CSS files in a `css` subdirectory and JavaScript files in a `js` subdirectory within `src`.
-
-### Development Workflow
+### Committing your file to a branch
 git add .  
 - Use this to stage your changes.
 
@@ -76,15 +53,3 @@ git commit -m "Your commit message"
 
 git push  
 - Use this to push your changes to the remote repository.
-
-### Previewing Web Pages
-- Use a local development server (e.g., `Live Server` extension in VS Code) to preview your web pages.
-
-### Deployment
-git checkout -b gh-pages  
-- Use this to create a `gh-pages` branch.
-
-git push origin gh-pages  
-- Use this to push the branch to the remote repository.
-
-- Your web pages will be available at `https://<username>.github.io/<repository-name>/`.
