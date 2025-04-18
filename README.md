@@ -1,3 +1,15 @@
+Hello welcome to the Descendants project!
+
+Run this command before developing:
+'npm install'
+
+Run this to see the website:
+'npm run dev'
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
