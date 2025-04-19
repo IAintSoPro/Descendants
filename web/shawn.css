@@ -1,9 +1,9 @@
 .background-color {
   background: radial-gradient(circle, #8b2323, #000000);
-  color: white;
-  height: 100vh;
-  margin: 0;
-  display: flex;
+  color: white; /*color of the text inside this body*/
+  height: 100vh; /*viewport height*/
+  margin: 0; /*spaces between divs or any other element*/
+  display: flex; /*flex box allows you to changed the direction of your elements flow (horizontal or vertical)*/
   align-items: center;
   justify-content: center;
 }
