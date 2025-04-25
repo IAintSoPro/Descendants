@@ -1,7 +1,7 @@
 .body {
   background: radial-gradient(circle, #450202 20%, #000000 100%);
   color: white; /*color of the text inside this body*/
-  height: 100vh; /*viewport height*/
+  height: 95vh; /*viewport height*/
   margin: 0; /*spaces between divs or any other element*/
   display: flex; /*flex box allows you to changed the direction of your elements flow (horizontal or vertical)*/
   align-items: center;
@@ -18,7 +18,7 @@
 .container {
   display: flex;
   /* background-color: green; */
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   gap: 1em;
 }
@@ -26,6 +26,7 @@
 .sections {
   display: flex;
   justify-content: center;
-  flex: 1;
+  flex: 1; /*This makes it so that all the secions are equal in size*/
   border: 1px solid white;
+  text-overflow: ellipsis;
 }
