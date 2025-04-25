@@ -1,4 +1,4 @@
-.background-color {
+.body {
   background: radial-gradient(circle, #450202 20%, #000000 100%);
   color: white; /*color of the text inside this body*/
   height: 100vh; /*viewport height*/
@@ -7,30 +7,25 @@
   align-items: center;
   justify-content: center;
 }
-.where {
-  border: 2px solid white; /*Implement a styles like this to find what youre wokring on*/
+
+.parent-div {
+  /* border: 1px solid blue; */
+  padding: 20px;
+  height: 100%;
+  width: 100%;
 }
 
-.content {
-  flex-direction: column;
+.container {
+  display: flex;
+  /* background-color: green; */
+  height: 100%;
+  width: 100%;
+  gap: 1em;
 }
 
-.button-div {
-  align-items: center;
+.sections {
   display: flex;
   justify-content: center;
-}
-
-.click-me-button {
-  background-color: #310202;
-  color: white;
+  flex: 1;
   border: 1px solid white;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.click-me-button:hover {
-  background-color: #852600; /* darker blue on hover */
 }
