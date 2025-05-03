@@ -1,13 +1,12 @@
 .body {
   background: linear-gradient(to top, #8ebaf3, #0a3061);
   color: white; /*color of the text inside this body*/
-  height: 100vh; 
+  height: 100vh;
   margin: 0; /*spaces between divs or any other element*/
   display: flex; /*flex box allows you to changed the direction of your elements flow (horizontal or vertical)
   align-items: center;
   justify-content: center; */
   background-attachment: fixed;
-
 }
 
 .parent-div {
@@ -15,7 +14,7 @@
   padding: 20px;
   height: 100%;
   width: 100%;
-  flex-direction:column;
+  flex-direction: column;
   display: flex;
 }
 
@@ -45,5 +44,4 @@
   border: 1px solid rgb(255, 255, 255);
   justify-content: center;
   flex: 1;
-  
 }
