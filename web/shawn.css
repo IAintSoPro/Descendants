@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  margin: 40px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.implementation img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none;            /* Remove focus outline */
+}
