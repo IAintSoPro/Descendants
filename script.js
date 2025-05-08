@@ -29,3 +29,13 @@ window.addEventListener('DOMContentLoaded', () => {
       `;
   }
 });
+
+//#region Spinning Button
+
+const spinButton = document.getElementById('spinButton');
+const logo = document.getElementById('logo');
+
+spinButton.addEventListener('click', () => {
+  logo.classList.toggle('spin');
+});
+//#endregion

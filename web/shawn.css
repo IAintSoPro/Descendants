@@ -1,32 +1,50 @@
-.body {
-  background: radial-gradient(circle, #450202 20%, #000000 100%);
-  color: white; /*color of the text inside this body*/
-  height: 95vh; /*viewport height*/
-  margin: 0; /*spaces between divs or any other element*/
-  display: flex; /*flex box allows you to changed the direction of your elements flow (horizontal or vertical)*/
+body {
+  font-family: sans-serif;
+  margin: 40px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
   align-items: center;
-  justify-content: center;
-}
-
-.parent-div {
-  /* border: 1px solid blue; */
+  margin-bottom: 20px;
   padding: 20px;
-  height: 100%;
-  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  display: flex;
-  /* background-color: green; */
-  /* height: 100%; */
-  width: 100%;
-  gap: 1em;
+
+.implementation img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
-.sections {
-  display: flex;
-  justify-content: center;
-  flex: 1; /*This makes it so that all the secions are equal in size*/
-  border: 1px solid white;
-  text-overflow: ellipsis;
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none;            /* Remove focus outline */
 }
