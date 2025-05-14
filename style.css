@@ -1,8 +1,49 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    90deg,
+    hsla(350, 73%, 44%, 1) 0%,
+    hsla(274, 65%, 12%, 1) 100%
+  );
+}
+
 nav {
-  background-color: #f2f2f2;
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(94, 184, 190) 100%
+  );
   border-bottom: 1px solid #ccc;
 }
 
-nav ul li a:hover {
+nav:hover {
   text-decoration: underline;
+}
+
+.welcome {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 85px;
+}
+
+.login-container {
+  background-color: aquamarine;
+  height: 25em;
+  width: 20em;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginButton {
+  height: 5em;
+  width: 15em;
+  border-radius: 15px;
+  border: 1px solid #717171;
 }

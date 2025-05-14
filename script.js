@@ -2,9 +2,12 @@
 
 //#region DOM listener
 window.addEventListener('DOMContentLoaded', () => {
+  // Initialize the functions to ensure the DOM is fully loaded before they run
   initNavbar();
   initSpinningButton();
+  initLogin();
 });
+//#endregion
 
 //#region Routes (initNavbar)
 function initNavbar() {
@@ -35,6 +38,19 @@ function initSpinningButton() {
   if (spinButton && logo) {
     spinButton.addEventListener('click', () => {
       logo.classList.toggle('spin');
+    });
+  }
+}
+//#endregion
+
+//#region Login Button
+function initLogin() {
+  const login = document.getElementById('login');
+  const routes = window.ROUTES || [];
+
+  if (login) {
+    login.addEventListener('click', () => {
+      window.location.href = 'web/shawn.html';
     });
   }
 }
