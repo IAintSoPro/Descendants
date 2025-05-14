@@ -21,7 +21,6 @@ h1 {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .implementation img {
   display: inline-block;
   vertical-align: middle;
@@ -46,5 +45,5 @@ h1 {
   background: transparent;
   padding: 0;
   cursor: pointer;
-  outline: none;            /* Remove focus outline */
+  outline: none; /* Remove focus outline */
 }

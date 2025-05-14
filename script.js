@@ -1,17 +1,13 @@
-// This runs when the page finishes loading
+// This file contains logic
+
+//#region DOM listener
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('Page loaded!');
-
-  const btn = document.getElementById('clickMe');
-
-  if (btn) {
-    btn.addEventListener('click', () => {
-      alert('You clicked the button!');
-    });
-  }
+  initNavbar();
+  initSpinningButton();
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+//#region Routes (initNavbar)
+function initNavbar() {
   const navbar = document.getElementById('navbar');
   const routes = window.ROUTES || [];
 
@@ -28,14 +24,18 @@ window.addEventListener('DOMContentLoaded', () => {
         </ul>
       `;
   }
-});
+}
+//#endregion
 
-//#region Spinning Button
+//#region initSpinningButton
+function initSpinningButton() {
+  const spinButton = document.getElementById('spinButton');
+  const logo = document.getElementById('logo');
 
-const spinButton = document.getElementById('spinButton');
-const logo = document.getElementById('logo');
-
-spinButton.addEventListener('click', () => {
-  logo.classList.toggle('spin');
-});
+  if (spinButton && logo) {
+    spinButton.addEventListener('click', () => {
+      logo.classList.toggle('spin');
+    });
+  }
+}
 //#endregion
