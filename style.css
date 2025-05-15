@@ -33,17 +33,24 @@ nav:hover {
 
 .login-container {
   background-color: aquamarine;
+  gap: 10px;
   height: 25em;
   width: 20em;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .loginButton {
-  height: 5em;
+  height: 3em;
   width: 15em;
-  border-radius: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
   border: 1px solid #717171;
+}
+
+.loginTextField {
+  height: 2em;
 }

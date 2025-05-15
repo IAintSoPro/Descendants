@@ -43,13 +43,31 @@ function initSpinningButton() {
 }
 //#endregion
 
-//#region Login Button
+//#region Login
 function initLogin() {
-  const login = document.getElementById('login');
-  const routes = window.ROUTES || [];
+  // Grabs elements
+  const loginBtn = document.getElementById('login');
+  const usernameInput = document.getElementById('username');
+  const passwordInput = document.getElementById('password');
 
-  if (login) {
-    login.addEventListener('click', () => {
+  // This function checks if there are values in these elements
+  function validateInputs() {
+    // Checks length of value to be more than 0(or empty)
+    const isValidUsername = usernameInput.value.trim().length > 0;
+    const isValidPassword = passwordInput.value.trim().length > 0;
+    // disables button if both are true
+    loginBtn.disabled = !(isValidUsername && isValidPassword);
+  }
+
+  if (loginBtn && usernameInput && passwordInput) {
+    // Initialize the button to disabled
+    loginBtn.disabled = true;
+    // Listens for any changes in inputs and checks it
+    usernameInput.addEventListener('input', validateInputs);
+    passwordInput.addEventListener('input', validateInputs);
+
+    // Listens for a click
+    loginBtn.addEventListener('click', () => {
       window.location.href = 'web/shawn.html';
     });
   }
