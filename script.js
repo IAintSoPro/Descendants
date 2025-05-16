@@ -68,7 +68,7 @@ function initLogin() {
 
     // Listens for a click
     loginBtn.addEventListener('click', () => {
-      window.location.href = 'web/shawn.html';
+      window.location.href = 'web/Dashboard.html';
     });
   }
 }
