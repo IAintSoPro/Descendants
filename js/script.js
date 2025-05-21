@@ -50,26 +50,40 @@ function initLogin() {
   const usernameInput = document.getElementById('username');
   const passwordInput = document.getElementById('password');
 
-  // This function checks if there are values in these elements
-  function validateInputs() {
-    // Checks length of value to be more than 0(or empty)
-    const isValidUsername = usernameInput.value.trim().length > 0;
-    const isValidPassword = passwordInput.value.trim().length > 0;
-    // disables button if both are true
-    loginBtn.disabled = !(isValidUsername && isValidPassword);
+  loginBtn.disabled = true;
+
+  function validateUsername() {
+    const username = usernameInput.value;
+
+    const USER_NAME_REGEX = /(?=.*[a-z])(?=.*[A-Z])([@])/;
+
+    return USER_NAME_REGEX.test(username);
   }
 
-  if (loginBtn && usernameInput && passwordInput) {
-    // Initialize the button to disabled
-    loginBtn.disabled = true;
-    // Listens for any changes in inputs and checks it
-    usernameInput.addEventListener('input', validateInputs);
-    passwordInput.addEventListener('input', validateInputs);
+  function validatePassword() {
+    const password = passwordInput.value;
 
-    // Listens for a click
-    loginBtn.addEventListener('click', () => {
-      window.location.href = 'web/Dashboard.html';
-    });
+    const USER_PASSWORD_REGEX =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+    return USER_PASSWORD_REGEX.test(password);
   }
+
+  function validateForm() {
+    if (validateUsername() && validatePassword()) {
+      loginBtn.disabled = false;
+    } else {
+      loginBtn.disabled = true;
+    }
+  }
+
+  usernameInput.addEventListener('input', validateForm);
+  passwordInput.addEventListener('input', validateForm);
+
+  // Listens for a click
+  loginBtn.addEventListener('click', () => {
+    window.location.href = 'web/Dashboard.html';
+  });
 }
+
 //#endregion
